@@ -1,0 +1,662 @@
+* {
+    padding:0;
+    margin:0;
+    border:none;
+    outline:none;
+}
+body {
+    min-height:100vh;
+    background:#161617;
+    overflow-x:auto;
+    max-width:100vw;
+}
+#root {
+    min-height:100vh;
+    max-width:100%;
+}
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+::-webkit-scrollbar-track {
+    background:transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: red; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #FF5659; 
+}
+::placeholder {
+    color: #4F4F4F;
+}
+::-webkit-inner-spin-button {
+    display:none;
+}.bestOfRobin {
+    color:white;
+    font-family: sans-serif;
+    font-size:16px;
+    padding-bottom:30px;
+    user-select:none;
+}
+.roundOfWrapperRobin {
+    width:1200px;
+}
+.roundOfRobin {
+    color:white;
+    font-family:sans-serif;
+    font-size:36px;
+    font-weight:700;
+    user-select:none;
+}
+.bestOfRobin {
+    color:white;
+    font-family: sans-serif;
+    font-size:16px;
+    padding-bottom:30px;
+    user-select:none;
+}
+.roundRobinTCardWrapper {
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    max-width:200%;
+    flex-wrap:wrap;
+}.roundRobin {
+    display:flex;
+    flex-direction:column;
+}
+.scoreBoardWrapper {
+    display:flex;
+}
+.scoreBoardName { 
+    color:white;
+    font-size:72px;
+    font-family:sans-serif;
+    margin-bottom:15px;
+    transition:0.5s;
+}
+.toggleScoreBoard {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    background:transparent;
+    cursor:pointer;
+}.scoreBoardRow {
+    display:flex;
+    margin-bottom:7px;
+    border-bottom:1px solid grey;
+    width:100%;
+}
+.rowTeamName {
+    color:white;
+    font-size:20px;
+    font-family:sans-serif;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    width:270px;
+}
+.rowWin {
+    margin-left:100px;
+    color:chartreuse;
+    font-size:16px;
+    font-family:sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.rowLoss {
+    margin-left:100px;
+    color:red;
+    font-size:16px;
+    font-family:sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}.scoreBoard {
+    display:flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+    width:500px;
+}.roundRobinSections {
+    display:flex;
+}
+.roundRobinGoRight {
+    width: 0; 
+    height: 0; 
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid red;
+    border-top: 50px solid transparent;
+    background:transparent;
+    cursor:pointer;
+    transition:border 0.5s;
+}
+.roundRobinGoRight:hover {
+    border-left: 50px solid orange;
+}
+.roundRobinGoLeft {
+    margin-right:100px;
+    width: 0; 
+    height: 0; 
+    border-bottom: 50px solid transparent;
+    border-right: 50px solid red;
+    border-top: 50px solid transparent;
+    background:transparent;
+    cursor:pointer;
+    transition:0.5s;
+}
+.roundRobinGoLeft:hover {
+    border-right: 50px solid orange;
+}.roundOfWrapperSingle {
+    padding-top:80px;
+    display:flex;
+    flex-direction:column;
+    user-select:none;
+}
+.roundOfSingle {
+    color:white;
+    font-family:sans-serif;
+    font-size:36px;
+    font-weight:700;
+    user-select:none;
+}
+.bestOfSingle {    
+    color:white;
+    font-family: sans-serif;
+    font-size:16px;
+    padding-bottom:30px;
+    user-select:none;
+}
+.singleEliminationTCardWrapper {
+    display:flex;
+    flex-direction:column;
+}.singleElimination {
+    flex-shrink:0;
+    display:flex;
+    user-select:none;
+}.tCardWrapper {
+    position:relative;
+    width:330px;
+    user-select:none;
+    display:flex;
+}
+.tCardNumber {
+    width:30px;
+    color:white;
+    font-family:sans-serif;
+    font-weight:400;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.tCard {
+    position:relative;
+    width:220px;
+    height:50px;
+    box-sizing:border-box;
+    border:1px solid black;
+    box-shadow: 2px 2px 2px sandybrown;
+    display:flex;
+    flex-direction:column;
+    user-select:none;
+}
+.teamWrapper {
+    display:flex;
+    flex:1;
+    user-select:none;
+}
+.tCardTeam {
+    flex:5;
+    padding-left:8px;
+    color:white;
+    font-family:sans-serif;
+    font-size:16px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    user-select:none;
+    background:#2C3034;
+}
+.tCardScore {
+    width:15%;
+    background:#2D1E22;
+    padding-left:12px;
+    box-sizing:border-box;
+    border-left:1px solid black;
+    color:#9FFF4C;
+    user-select:none;    
+}
+.horizontalConnection {
+    position:absolute;
+    top:50%;
+    left:2px;
+    background:white;
+    height:1px;
+    width:100%;
+}
+.verticalConnection {
+    position:absolute;
+    right:0%;
+    background:white;
+    height:50%;
+    width:1px;
+}.theBracket {
+    position:relative;
+    width:100%;
+    height:100vh;
+    box-sizing:border-box;
+    border:1px solid black;
+    background:black;
+    cursor:move;
+    overflow:hidden;
+    user-select:none;
+}
+.bracketMid {
+    display:flex;
+    min-width:100%;
+}
+.bracketTop {
+    width:100%;
+    height:10%;
+}
+.bracketBottom {
+    width:100%;
+    height:50%;
+}
+.tournamentNameOnTopOfBracket {
+    color:white;
+    font-family: sans-serif;
+    font-size:40px;
+    padding-top:20px;
+    padding-left:80px;
+    user-select:none;
+}
+.tournamentFormatOnTopOfBracket {
+    color:white;
+    font-family:sans-serif;
+    font-size:16px;
+    padding-left:80px;
+    padding-bottom:10px;
+    user-select:none;
+}
+.bracketRightSpace {
+    flex-shrink:0;
+    width:60%;
+    height:100%;
+    box-sizing:border-box;
+    border:1px solid black;
+}
+.bracketLeftSpace {
+    flex-shrink:0;
+    width:10%;
+    height:100%;
+}.buttonsSection {
+    display:flex;
+    flex-direction:column;
+}
+.blankTeam {
+    display:none;
+    color:red;
+    font-family:sans-serif;
+    font-size:16px;
+    margin-left:calc(25% + 50px);
+    margin-bottom:10px;
+    animation-name: EnterTeamPrompt;
+    animation-duration:1s;
+    cursor:pointer;
+}
+.duplicateTeam {
+    display:none;
+    color:red;
+    font-family:sans-serif;
+    font-size:16px;
+    margin-left:calc(25% + 50px);
+    margin-bottom:10px;
+    animation-name: EnterTeamPrompt;
+    animation-duration:1s;
+    cursor:pointer;
+}
+@keyframes EnterTeamPrompt {
+    from {
+        font-size:32px;
+    }
+    to {
+        font-size:16px;
+    }
+}
+.infoButtonWrapper {
+    position:relative;
+    margin-left:calc(25% + 50px);
+    display:flex;
+    margin-bottom:70px;
+}
+.generate {
+    width:150px;
+    height:40px;
+    background:#FF0547;
+    color:white;
+    font-size:16px;
+    font-family:sans-serif;
+    font-weight:600;
+    box-sizing:border-box;
+    border:1px solid black;
+    border-radius:5px;
+    cursor: pointer;
+    text-decoration:none;
+    transition:0.4s;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    user-select:none;
+}
+.generate:hover {
+    background:orangered;
+}
+.randomize {
+    width:100px;
+    height:40px;
+    margin-left:15px;
+    color:white;
+    font-size:16px;
+    font-family:sans-serif;
+    font-weight:600;
+    background:brown;
+    box-sizing:border-box;
+    border:1px solid black;
+    border-radius:5px;
+    cursor: pointer;
+    transition:0.4s;
+    user-select:none;
+}
+.randomize:hover {
+    background:orangered;
+}
+.clear {
+    width:60px;
+    height:40px;
+    margin-left:15px;
+    color:black;
+    font-size:16px;
+    font-family:sans-serif;
+    font-weight:600;
+    background:#B5B4B4;
+    box-sizing:border-box;
+    border:1px solid black;
+    border-radius:5px;
+    cursor: pointer;
+    transition:0.4s;
+    user-select:none;
+}
+@media (max-width:768px) {
+    .pleaseEnterTeam {
+        margin-left:0;
+    }
+    .infoButtonWrapper {
+        margin-left:0;
+    }
+}.infoForm {
+    min-width:100%;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+.easyBracket {
+    margin-top:80px;
+    margin-bottom:40px;
+    padding-left:20%;
+    color:white;
+    font-size:62px;
+    font-family:sans-serif;
+    font-weight:600;
+}
+@media (max-width:768px) {
+    .easyBracket {
+        padding:0;
+    }
+}.addTeamsArea {
+    padding:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    min-height:350px;
+    box-shadow: 1px 1px 1px white, -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white;
+    background:#121216;
+    color:white;
+    transition:0.3s;
+    padding-left:15px;
+    font-size:16px;
+    font-family:sans-serif;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+.addTeamsArea:hover {
+    box-shadow: 2px 2px 2px orange, -2px -2px 2px orange, 2px -2px 2px orange, -2px 2px 2px orange;
+}
+.addTeamsArea:focus-within {
+    box-shadow: 3px 3px 3px orangered, -3px -3px 3px orangered, 3px -3px 3px orangered, -3px 3px 3px orangered;
+}
+@media (max-width:768px) {
+    .addTeamsArea {
+        padding-left:5px;
+        padding-right:5px;
+        width:100%;
+    }
+}.teamNameChanger {
+    margin-top:5px;
+    display:flex;
+    box-sizing:border-box;
+    border:1px solid black;
+}
+.teamNum {
+    font-size:16;
+    font-family:sans-serif;
+    padding:5px;
+    padding-right:10px;
+}
+.teamInput {
+    width:400px;
+    font-size:16;
+    font-family:sans-serif;
+    padding-left:10px;
+    background:#231E1E;
+    color:white;
+}
+.teamInput::placeholder {
+    color:red;
+    opacity:0.4;
+}
+@media (max-width:768px) {
+    .teamNameChanger {
+        width:100%;
+    }
+    .teamInput {
+        width:100%;
+    }
+}.bestOfRoundRobin {
+    position:relative;
+    width:100%;
+    margin-top:25px;
+}
+.bestOfRoundRobinName {
+    display:flex;
+    justify-content: flex-end;
+    color:white;
+    font-family:sans-serif;
+    margin-bottom:10px;
+}
+.bestOfRoundRobinHeader {
+    flex:5;
+    color:white;
+    font-size:16px;
+    font-family:sans-serif;
+    display:flex;
+    align-items:center;
+}
+.bestOfRoundRobinInput {
+    position:absolute;
+    right:0;
+    color:white;
+    background:#121216;
+    box-sizing:border-box;
+    border:1px solid black;
+    font-size:16px;
+    width:50px;
+    display:flex;
+    justify-content: center;
+    margin-left: 10px;
+    padding-left:7px;
+}.bestOfSingle {
+    position:relative;
+    width:100%;
+    margin-top:25px;
+}
+.bestOfSingleName {
+    display:flex;
+    justify-content: flex-end;
+    color:white;
+    font-family:sans-serif;
+    margin-bottom:10px;
+}
+.bestOfSingleHeader {
+    flex:5;
+    color:white;
+    font-size:16px;
+    font-family:sans-serif;
+    display:flex;
+    align-items:center;
+}
+.bestOfSingleInput {
+    position:absolute;
+    right:0;
+    color:white;
+    background:#121216;
+    box-sizing:border-box;
+    border:1px solid black;
+    font-size:16px;
+    width:50px;
+    display:flex;
+    justify-content: center;
+    margin-left: 10px;
+    padding-left:7px;
+}.teamsContainer {
+    margin-top:40px;
+    margin-bottom:30px;
+    width:100%;
+    display:flex;
+}
+.teamsLabel {
+    height:100%;
+    width:25%;
+    padding-right:50px;
+    color:#C1C1C1;
+    font-weight:600;
+    font-family:sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+}
+.teamsRemaining {
+    margin-top:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:16px;
+    font-family:sans-serif;
+    color:#606060;
+}
+@media (max-width:768px) {
+    .teamsWrapper {
+        width:90%;
+        margin-left:5%;
+    }
+    .teamsLabel {
+        display:none;
+    }
+}.formatContainer {
+    margin-top:40px;
+    width:100%;
+    height:40px;
+    width:100%;
+    display:flex;
+}
+.formatName {
+    height:100%;
+    width:25%;
+    padding-right:50px;
+    color:#C1C1C1;
+    font-weight:600;
+    font-family:sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+}
+.format {
+    height:100%;
+    width:700px;
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    box-shadow: 1px 1px 1px white, -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white;
+    background:#121216;
+    color:white;
+    transition:0.3s;
+    padding-left:15px;
+    font-size:16px;
+    box-sizing:border-box;
+}
+.format:hover {
+    box-shadow: 2px 2px 2px orange, -2px -2px 2px orange, 2px -2px 2px orange, -2px 2px 2px orange;
+}
+.format:focus {
+    box-shadow: 3px 3px 3px orangered, -3px -3px 3px orangered, 3px -3px 3px orangered, -3px 3px 3px orangered;
+}
+@media (max-width:768px) {
+    .formatName {
+        display: none;
+    }
+    .format {
+        margin-left:5%;
+        width:90%;
+    }
+}.nameContainer {
+    height:40px;
+    width:100%;
+    display:flex;
+}
+.tournamentName {
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    padding-right:50px;
+    width:25%;
+    color:#C1C1C1;
+    font-weight:600;
+    font-family:sans-serif;
+}
+.nameInput {
+    width:700px;
+    box-shadow: 1px 1px 1px white, -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white;
+    background:#121216;
+    color:white;
+    transition:0.3s;
+    padding-left:15px;
+    font-size:16px;
+    overflow:visible;
+    box-sizing: border-box;
+}
+.nameInput:hover {
+    box-shadow: 2px 2px 2px orange, -2px -2px 2px orange, 2px -2px 2px orange, -2px 2px 2px orange;
+}
+.nameInput:focus {
+    box-shadow: 3px 3px 3px orangered, -3px -3px 3px orangered, 3px -3px 3px orangered, -3px 3px 3px orangered;
+}
+@media (max-width:768px) {
+    .tournamentName {
+        display:none;
+    }
+    .nameInput {
+        margin-left:5%;
+        width:90%;
+    }
+}

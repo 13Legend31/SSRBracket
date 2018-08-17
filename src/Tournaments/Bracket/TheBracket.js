@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { findDOMNode } from 'react-dom'
 import { connect } from 'react-redux'
-import './TheBracket.css'
 
 import SingleElimination from './Formats/SingleElimination/SingleElimination'
 import RoundRobin from './Formats/RoundRobin/RoundRobin'

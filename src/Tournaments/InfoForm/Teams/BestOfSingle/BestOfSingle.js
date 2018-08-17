@@ -1,7 +1,6 @@
 import React, { Component, PureComponent } from 'react'
 import { findDOMNode } from 'react-dom'
 import { connect } from 'react-redux'
-import './BestOfSingle.css'
 
 import { BestOfSingleAction } from '../../../../Redux/Bracket/Single/BestOfSingle'
 import { IsBracketUpToDateAction } from '../../../../Redux/Bracket/IsBracketUpToDate'

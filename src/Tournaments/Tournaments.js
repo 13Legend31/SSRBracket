@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import './Tournaments.css'
 
 import Routes from './Routes/Routes.js'
 

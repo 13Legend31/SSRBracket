@@ -1,7 +1,0 @@
-.scoreBoard {
-    display:flex;
-    flex-direction: column;
-    flex-wrap:wrap;
-    margin-bottom:25px;
-    width:500px;
-}

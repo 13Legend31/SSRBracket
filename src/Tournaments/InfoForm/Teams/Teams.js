@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import './Teams.css'
 
 import AddTeamsArea from './AddTeamsArea/AddTeamsArea'
 import BestOfSingle from './BestOfSingle/BestOfSingle'

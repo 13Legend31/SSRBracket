@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import './Input.css'
 
 class Input extends PureComponent {
     UpdateName = (e) => {

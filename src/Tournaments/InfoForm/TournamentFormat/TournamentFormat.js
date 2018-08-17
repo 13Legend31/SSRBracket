@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import './TournamentFormat.css'
 
 import { TournamentFormatAction } from '../../../Redux/Info/TournamentFormat'
 import { IsBracketUpToDateAction } from '../../../Redux/Bracket/IsBracketUpToDate'

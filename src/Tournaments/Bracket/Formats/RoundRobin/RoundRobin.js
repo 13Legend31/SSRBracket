@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import './RoundRobin.css'
 
 import { IsBracketUpToDateAction } from '../../../../Redux/Bracket/IsBracketUpToDate'
 import { RoundRobinDataAction } from '../../../../Redux/Bracket/RoundRobin/RoundRobinData'

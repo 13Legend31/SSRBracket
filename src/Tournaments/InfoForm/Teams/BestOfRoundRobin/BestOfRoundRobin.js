@@ -1,7 +1,6 @@
 import React, { Component, PureComponent } from 'react'
 import { findDOMNode } from 'react-dom'
 import { connect } from 'react-redux'
-import './BestOfRoundRobin.css'
 
 import { BestOfRoundRobinAction } from '../../../../Redux/Bracket/RoundRobin/BestOfRoundRobin'
 import { IsBracketUpToDateAction } from '../../../../Redux/Bracket/IsBracketUpToDate'

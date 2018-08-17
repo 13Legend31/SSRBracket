@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import './AddTeamsArea.css'
 
 import { TeamsAction } from '../../../../Redux/Info/Teams'
 import { IsBracketUpToDateAction } from '../../../../Redux/Bracket/IsBracketUpToDate'

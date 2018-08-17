@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import './Row.css'
 
 class Row extends PureComponent {
     render() {

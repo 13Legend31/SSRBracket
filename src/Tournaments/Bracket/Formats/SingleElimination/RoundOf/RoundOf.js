@@ -1,5 +1,4 @@
 import React from 'react'
-import './RoundOf.css'
 
 import TCard from '../../../TCard/TCard'
 

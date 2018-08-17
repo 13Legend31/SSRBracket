@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import './SingleElimination.css'
 
 import { IsBracketUpToDateAction } from '../../../../Redux/Bracket/IsBracketUpToDate'
 import { SingleEliminationDataAction } from '../../../../Redux/Bracket/Single/SingleEliminationData'

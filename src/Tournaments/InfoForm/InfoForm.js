@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './InfoForm.css'
 
 import TournamentFormat from './TournamentFormat/TournamentFormat'
 import TournamentName from './TournamentName/TournamentName'

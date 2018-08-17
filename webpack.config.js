@@ -12,11 +12,10 @@ const browser = {
                     loader: 'babel-loader'
                 }
             },
-            {
+            /* {
                 test: /\.css$/,
                 use: [ 'style-loader', 'css-loader' ]
-            }
-        
+            }    */     
         ]
     },
     output: {
@@ -38,10 +37,10 @@ const server = {
                     loader: 'babel-loader'
                 }
             },
-            {
+            /* {
                 test: /\.css$/,
                 use: [ 'css-loader' ]
-            }
+            } */
         ]
     },
     output: {

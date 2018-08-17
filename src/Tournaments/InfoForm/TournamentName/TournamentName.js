@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import './TournamentName.css'
 
 import { TournamentNameAction } from '../../../Redux/Info/TournamentName'
 

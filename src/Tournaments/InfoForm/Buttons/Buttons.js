@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { findDOMNode } from 'react-dom'
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import './Buttons.css'
 
 import { TeamsAction } from '../../../Redux/Info/Teams'
 import { IsBracketUpToDateAction } from '../../../Redux/Bracket/IsBracketUpToDate'

@@ -25,11 +25,17 @@ app.get ('*', (req, res) => {
     <!DOCTYPE html>
     <html lang="en">
       <head>
+        <title>Easy Bracket</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="theme-color" content="#000000">
-        <title>Easy Bracket</title>
+        <link rel='stylesheet' type='text/css' href='/bundle.css'>
         <script src='/bundle.js' defer></script>
+        <style>
+          select {
+            appearance: none;
+          }
+        </style>
       </head>
       
       <body>
@@ -41,4 +47,4 @@ app.get ('*', (req, res) => {
     </html>`)
 })
 
-  app.listen(1337)
+  app.listen(3000)

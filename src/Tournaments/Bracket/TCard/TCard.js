@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import { findDOMNode } from 'react-dom'
-import './TCard.css'
 
 const glowOrange = {
     background:'orange'
