@@ -10,17 +10,14 @@ class AddTeamsArea extends Component {
     constructor(props) {
         super(props)
         this.focus = 0
-        this.inputs = [] // SET THIS IN COMPONENT DID MOUNT, CHANGE THIS IN ADD/REMOVE TEAMS
+        this.inputs = [] // SET THIS IN COMPONENTDIDMOUNT, CHANGE THIS IN ADD/REMOVE TEAMS
     }
 
     componentDidMount = () => {
         document.getElementsByClassName('addTeamsArea')[0].addEventListener('keydown', (e) => {
-            // press enter, add a team
             if (e.keyCode === 13) {
                 this.AddTeam(this.focus)
-            }
-            // press esc, remove a team
-            else if (e.keyCode === 27) {
+            } else if (e.keyCode === 8 && this.inputs[this.focus].value === '') {
                 this.RemoveTeam(this.focus)
             } else if (e.keyCode === 38) {
                 this.ChangeFocus(this.focus - 1)
@@ -30,16 +27,6 @@ class AddTeamsArea extends Component {
         })
 
         this.inputs = document.getElementsByClassName('teamInput')
-        // THIS IS ONLY FOR TESTING
-        /* const teams = {...this.props.teams}
-        const teamsList = []
-        for (let i = 0; i < 256; i++) {
-            teamsList.push(`${i + 1}`)
-        }
-        teams.teamsList = teamsList
-        teams.remaining = 256 - teamsList.length
-        this.props.UpdateTeams(teams) */
-        //----------------------------
     }
 
     UpdateTeamName = (index, name) => {

@@ -7,8 +7,8 @@ import { IsBracketUpToDateReducer } from '../src/Redux/Bracket/IsBracketUpToDate
 import { SingleEliminationDataReducer } from '../src/Redux/Bracket/Single/SingleEliminationData'
 import { BestOfSingleReducer } from '../src/Redux/Bracket/Single/BestOfSingle'
 import { RoundRobinDataReducer } from '../src/Redux/Bracket/RoundRobin/RoundRobinData'
-import { RoundRobinScoreBoardReducer } from '.../src/src/Redux/Bracket/RoundRobin/RoundRobinScoreBoard'
-import { BestOfRoundRobinReducer } from '.../src/src/Redux/Bracket/RoundRobin/BestOfRoundRobin'
+import { RoundRobinScoreBoardReducer } from '../src/Redux/Bracket/RoundRobin/RoundRobinScoreBoard'
+import { BestOfRoundRobinReducer } from '../src/Redux/Bracket/RoundRobin/BestOfRoundRobin'
 
 const allReducers = combineReducers({
     tournamentName: TournamentNameReducer,
